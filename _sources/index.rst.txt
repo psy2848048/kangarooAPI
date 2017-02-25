@@ -1,0 +1,64 @@
+.. Kangaroo documentation master file, created by
+   sphinx-quickstart on Sat Feb 25 11:27:19 2017.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Kangaroo API DOC v1.0
+====================================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+회원관리
+-----------------
+ 
+  .. qrefflask:: app.application:app
+     :modules: app.userControl
+     :endpoints:
+     :order: path
+
+
+
+  .. autoflask:: app.application:app
+     :modules: app.userControl
+     :endpoints:
+     :order: path
+
+
+메시지관리
+-----------------
+  .. qrefflask:: app.application:app
+     :modules: app.messageControl
+     :endpoints:
+     :order: path
+
+
+
+  .. autoflask:: app.application:app
+     :modules: app.messageControl
+     :endpoints:
+     :order: path
+
+
+메시지관리
+-----------------
+  .. qrefflask:: app.application:app
+     :modules: app.scheduleControl
+     :endpoints:
+     :order: path
+
+
+
+  .. autoflask:: app.application:app
+     :modules: app.scheduleControl
+     :endpoints:
+     :order: path
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
