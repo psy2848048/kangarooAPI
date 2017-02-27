@@ -40,8 +40,8 @@ Kangaroo API DOC v1.0
      :endpoints:
      :order: path
 
-
-메시지관리
+  
+스케줄관리
 -----------------
   .. qrefflask:: app.application:app
      :modules: app.scheduleControl
