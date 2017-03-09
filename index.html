@@ -63,83 +63,113 @@
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>&nbsp;</td>
-<td><a class="reference external" href="#post--api-v2-alarm-off">POST /api/v2/alarm/off</a></td>
+<td><a class="reference external" href="#get--api-v1">GET /api/v1</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-odd"><td>&nbsp;</td>
-<td><a class="reference external" href="#post--api-v2-alarm-on">POST /api/v2/alarm/on</a></td>
+<td><a class="reference external" href="#post--api-v1-alarm-off">POST /api/v1/alarm/off</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>&nbsp;</td>
-<td><a class="reference external" href="#get--api-v2-interpreterList">GET /api/v2/interpreterList</a></td>
+<td><a class="reference external" href="#post--api-v1-alarm-on">POST /api/v1/alarm/on</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-odd"><td>&nbsp;</td>
-<td><a class="reference external" href="#post--api-v2-login">POST /api/v2/login</a></td>
+<td><a class="reference external" href="#get--api-v1-interpreterList">GET /api/v1/interpreterList</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>&nbsp;</td>
-<td><a class="reference external" href="#get--api-v2-logout">GET /api/v2/logout</a></td>
+<td><a class="reference external" href="#post--api-v1-login">POST /api/v1/login</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-odd"><td>&nbsp;</td>
-<td><a class="reference external" href="#post--api-v2-myInfo">POST /api/v2/myInfo</a></td>
+<td><a class="reference external" href="#get--api-v1-logout">GET /api/v1/logout</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>&nbsp;</td>
-<td><a class="reference external" href="#get--api-v2-myInfo">GET /api/v2/myInfo</a></td>
+<td><a class="reference external" href="#post--api-v1-myInfo">POST /api/v1/myInfo</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-odd"><td>&nbsp;</td>
-<td><a class="reference external" href="#get--api-v2-myInfo-profilePic-(filename)">GET /api/v2/myInfo/profilePic/(filename)</a></td>
+<td><a class="reference external" href="#get--api-v1-myInfo">GET /api/v1/myInfo</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>&nbsp;</td>
-<td><a class="reference external" href="#post--api-v2-signup">POST /api/v2/signup</a></td>
+<td><a class="reference external" href="#get--api-v1-myInfo-profilePic-(filename)">GET /api/v1/myInfo/profilePic/(filename)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-v1-signup">POST /api/v1/signup</a></td>
 <td>&nbsp;</td>
 </tr>
 </tbody>
 </table>
-<dl class="post">
-<dt id="post--api-v2-alarm-off">
-<code class="descname">POST </code><code class="descname">/api/v2/alarm/off</code><a class="headerlink" href="#post--api-v2-alarm-off" title="Permalink to this definition">¶</a></dt>
+<dl class="get">
+<dt id="get--api-v1">
+<code class="descname">GET </code><code class="descname">/api/v1</code><a class="headerlink" href="#get--api-v1" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="docutils">
-<dt>알람 Off (사용안함)</dt>
-<dd><p class="first"><em>Parameter</em>: Nothing</p>
+<dt>로그인체크</dt>
+<dd><p class="first"><strong>Parameters</strong>: Nothing</p>
 <dl class="last docutils">
-<dt><em>Response</em></dt>
-<dd># <em>200</em>: OK
-# <em>410</em>: Fail</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: 로그인 되어 있음 / 세션 값들 반환</li>
+<li><strong>403</strong>: 로그인 되어 있지 않음</li>
+</ol>
+</dd>
 </dl>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="post">
-<dt id="post--api-v2-alarm-on">
-<code class="descname">POST </code><code class="descname">/api/v2/alarm/on</code><a class="headerlink" href="#post--api-v2-alarm-on" title="Permalink to this definition">¶</a></dt>
+<dt id="post--api-v1-alarm-off">
+<code class="descname">POST </code><code class="descname">/api/v1/alarm/off</code><a class="headerlink" href="#post--api-v1-alarm-off" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>알람 Off (사용안함)</dt>
+<dd><p class="first"><strong>Parameter</strong>: Nothing</p>
+<dl class="last docutils">
+<dt><strong>Response</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: OK</li>
+<li><strong>410</strong>: Fail</li>
+</ol>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="post">
+<dt id="post--api-v1-alarm-on">
+<code class="descname">POST </code><code class="descname">/api/v1/alarm/on</code><a class="headerlink" href="#post--api-v1-alarm-on" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="docutils">
 <dt>알람 On (사용안함)</dt>
-<dd><p class="first"><em>Parameter</em>: Nothing</p>
+<dd><p class="first"><strong>Parameter</strong>: Nothing</p>
 <dl class="last docutils">
-<dt><em>Response</em></dt>
-<dd># <em>200</em>: OK
-# <em>410</em>: Fail</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: OK</li>
+<li><strong>410</strong>: Fail</li>
+</ol>
+</dd>
 </dl>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="get">
-<dt id="get--api-v2-interpreterList">
-<code class="descname">GET </code><code class="descname">/api/v2/interpreterList</code><a class="headerlink" href="#get--api-v2-interpreterList" title="Permalink to this definition">¶</a></dt>
+<dt id="get--api-v1-interpreterList">
+<code class="descname">GET </code><code class="descname">/api/v1/interpreterList</code><a class="headerlink" href="#get--api-v1-interpreterList" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="docutils">
 <dt>통역가 목록</dt>
 <dd><dl class="first last docutils">
-<dt><em>Parameters</em></dt>
-<dd><em>&#8220;page&#8221;</em>: (Default: 1) 페이징 기능을 위하여 삽입</dd>
-<dt><em>Response</em></dt>
-<dd><p class="first"># <em>200</em></p>
+<dt><strong>Parameters</strong></dt>
+<dd><strong>&#8220;page&#8221;</strong>: (Default: 1) 페이징 기능을 위하여 삽입</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first arabic simple">
+<li><strong>200</strong></li>
+</ol>
 <blockquote class="last">
 <div><div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -174,65 +204,82 @@
 </dd></dl>
 
 <dl class="post">
-<dt id="post--api-v2-login">
-<code class="descname">POST </code><code class="descname">/api/v2/login</code><a class="headerlink" href="#post--api-v2-login" title="Permalink to this definition">¶</a></dt>
+<dt id="post--api-v1-login">
+<code class="descname">POST </code><code class="descname">/api/v1/login</code><a class="headerlink" href="#post--api-v1-login" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="docutils">
 <dt>로그인</dt>
 <dd><dl class="first last docutils">
-<dt><em>Parameters</em></dt>
-<dd># <em>&#8220;email&#8221;</em>: String, email
-# <em>&#8220;password&#8221;</em>: String, sha256(password) 값을 전송
-# <em>&#8220;machine_type&#8221;</em>: (OPTIONAL) 기기 타입 (android, ios), 푸시 알람때문에 만듬
-# <em>&#8220;machine_id&#8221;</em>: (OPTIONAL) 기기 ID</dd>
-<dt><em>Response</em></dt>
-<dd># <em>200</em>: OK
-# <em>403</em>: Fail</dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;email&#8221;</strong>: String, email</li>
+<li><strong>&#8220;password&#8221;</strong>: String, sha256(password) 값을 전송</li>
+<li><strong>&#8220;machine_type&#8221;</strong>: (OPTIONAL) 기기 타입 (android, ios), 푸시 알람때문에 만듬</li>
+<li><strong>&#8220;machine_id&#8221;</strong>: (OPTIONAL) 기기 ID</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: OK</li>
+<li><strong>403</strong>: Fail</li>
+</ol>
+</dd>
 </dl>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="get">
-<dt id="get--api-v2-logout">
-<code class="descname">GET </code><code class="descname">/api/v2/logout</code><a class="headerlink" href="#get--api-v2-logout" title="Permalink to this definition">¶</a></dt>
+<dt id="get--api-v1-logout">
+<code class="descname">GET </code><code class="descname">/api/v1/logout</code><a class="headerlink" href="#get--api-v1-logout" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="docutils">
 <dt>로그아웃</dt>
-<dd><p class="first"><em>Parameters</em>; Nothing</p>
+<dd><p class="first"><strong>Parameters</strong>; Nothing</p>
 <dl class="last docutils">
-<dt><em>Response</em></dt>
-<dd># <em>200</em>: OK</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: OK</li>
+</ol>
+</dd>
 </dl>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="post">
-<dt id="post--api-v2-myInfo">
-<code class="descname">POST </code><code class="descname">/api/v2/myInfo</code><a class="headerlink" href="#post--api-v2-myInfo" title="Permalink to this definition">¶</a></dt>
+<dt id="post--api-v1-myInfo">
+<code class="descname">POST </code><code class="descname">/api/v1/myInfo</code><a class="headerlink" href="#post--api-v1-myInfo" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="docutils">
 <dt>개인정보 변경</dt>
 <dd><dl class="first last docutils">
-<dt><em>Parameters</em></dt>
-<dd># <em>&#8220;password&#8221;</em>: (OPTIONAL) sha256(password)
-# <em>&#8220;profile_pic&#8221;</em>: (OPTIONAL) Binary, 프로필사진
-# <em>&#8220;language_id&#8221;</em>: (OPTIONAL) Int, 언어 ID</dd>
-<dt><em>Response</em></dt>
-<dd># <em>200</em>: OK
-# <em>410</em>: Fail</dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;password&#8221;</strong>: (OPTIONAL) sha256(password)</li>
+<li><strong>&#8220;profile_pic&#8221;</strong>: (OPTIONAL) Binary, 프로필사진</li>
+<li><strong>&#8220;language_id&#8221;</strong>: (OPTIONAL) Int, 언어 ID</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: OK</li>
+<li><strong>410</strong>: Fail</li>
+</ol>
+</dd>
 </dl>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="get">
-<dt id="get--api-v2-myInfo">
-<code class="descname">GET </code><code class="descname">/api/v2/myInfo</code><a class="headerlink" href="#get--api-v2-myInfo" title="Permalink to this definition">¶</a></dt>
+<dt id="get--api-v1-myInfo">
+<code class="descname">GET </code><code class="descname">/api/v1/myInfo</code><a class="headerlink" href="#get--api-v1-myInfo" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="docutils">
 <dt>내 정보</dt>
-<dd><p class="first"><em>Parameters</em>: Nothing</p>
+<dd><p class="first"><strong>Parameters</strong>: Nothing</p>
 <dl class="last docutils">
-<dt><em>Response</em></dt>
-<dd><p class="first"># <em>200</em></p>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first arabic simple">
+<li><strong>200</strong></li>
+</ol>
 <blockquote class="last">
 <div><div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -257,34 +304,43 @@
 </dd></dl>
 
 <dl class="get">
-<dt id="get--api-v2-myInfo-profilePic-(filename)">
-<code class="descname">GET </code><code class="descname">/api/v2/myInfo/profilePic/</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#get--api-v2-myInfo-profilePic-(filename)" title="Permalink to this definition">¶</a></dt>
+<dt id="get--api-v1-myInfo-profilePic-(filename)">
+<code class="descname">GET </code><code class="descname">/api/v1/myInfo/profilePic/</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#get--api-v1-myInfo-profilePic-(filename)" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="docutils">
 <dt>프로필 사진 보기</dt>
 <dd><dl class="first last docutils">
-<dt><em>Parameter</em></dt>
-<dd># <em>&#8220;user_id&#8221;</em>: URL 직접삽입, Int, Profile API에 있는 유저ID</dd>
-<dt><em>Response</em></dt>
-<dd># <em>200</em>: 사진 Binary</dd>
+<dt><strong>Parameter</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;user_id&#8221;</strong>: URL 직접삽입, Int, Profile API에 있는 유저ID</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: 사진 Binary</li>
+</ol>
+</dd>
 </dl>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="post">
-<dt id="post--api-v2-signup">
-<code class="descname">POST </code><code class="descname">/api/v2/signup</code><a class="headerlink" href="#post--api-v2-signup" title="Permalink to this definition">¶</a></dt>
+<dt id="post--api-v1-signup">
+<code class="descname">POST </code><code class="descname">/api/v1/signup</code><a class="headerlink" href="#post--api-v1-signup" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="docutils">
 <dt>회원가입</dt>
 <dd><dl class="first last docutils">
-<dt><em>Parameters</em></dt>
-<dd># <em>&#8220;email&#8221;</em>: String, email
-# <em>&#8220;name&#8221;</em>: String, 이름
-# <em>&#8220;password&#8221;</em>: String, sha256(password)
-# <em>&#8220;language_id&#8221;</em>: Int, 지정된 언어ID</dd>
+<dt><strong>Parameters</strong></dt>
+<dd># <strong>&#8220;email&#8221;</strong>: String, email
+# <strong>&#8220;name&#8221;</strong>: String, 이름
+# <strong>&#8220;password&#8221;</strong>: String, sha256(password)
+# <strong>&#8220;language_id&#8221;</strong>: Int, 지정된 언어ID</dd>
 <dt><em>Response</em></dt>
-<dd># <em>200</em>: OK
-# <em>403</em>: Fail</dd>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: OK</li>
+<li><strong>403</strong>: Fail</li>
+</ol>
+</dd>
 </dl>
 </dd>
 </dl>
@@ -309,33 +365,38 @@
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>&nbsp;</td>
-<td><a class="reference external" href="#post--api-v2-room">POST /api/v2/room</a></td>
+<td><a class="reference external" href="#post--api-v1-room">POST /api/v1/room</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-odd"><td>&nbsp;</td>
-<td><a class="reference external" href="#get--api-v2-room">GET /api/v2/room</a></td>
+<td><a class="reference external" href="#get--api-v1-room">GET /api/v1/room</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>&nbsp;</td>
-<td><a class="reference external" href="#post--api-v2-room-(int-room_id)-exit">POST /api/v2/room/(int:room_id)/exit</a></td>
+<td><a class="reference external" href="#put--api-v1-room-(int-room_id)-extend">PUT /api/v1/room/(int:room_id)/extend</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-odd"><td>&nbsp;</td>
-<td><a class="reference external" href="#post--api-v2-room-(int-room_id)-extend">POST /api/v2/room/(int:room_id)/extend</a></td>
+<td><a class="reference external" href="#post--api-v1-room-(int-room_id)-invite">POST /api/v1/room/(int:room_id)/invite</a></td>
 <td>&nbsp;</td>
 </tr>
 </tbody>
 </table>
 <dl class="post">
-<dt id="post--api-v2-room">
-<code class="descname">POST </code><code class="descname">/api/v2/room</code><a class="headerlink" href="#post--api-v2-room" title="Permalink to this definition">¶</a></dt>
+<dt id="post--api-v1-room">
+<code class="descname">POST </code><code class="descname">/api/v1/room</code><a class="headerlink" href="#post--api-v1-room" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="docutils">
 <dt>채팅방생성</dt>
 <dd><dl class="first last docutils">
-<dt><em>Parameters</em></dt>
-<dd># <em>&#8220;participants[]&#8221;</em>: Int array, User IDs</dd>
-<dt><em>Response</em></dt>
-<dd><p class="first"># <em>200</em></p>
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;participants[]&#8221;</strong>: Int array, User IDs</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first arabic simple">
+<li><strong>200</strong></li>
+</ol>
 <blockquote class="last">
 <div><div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -352,14 +413,16 @@
 </dd></dl>
 
 <dl class="get">
-<dt id="get--api-v2-room">
-<code class="descname">GET </code><code class="descname">/api/v2/room</code><a class="headerlink" href="#get--api-v2-room" title="Permalink to this definition">¶</a></dt>
+<dt id="get--api-v1-room">
+<code class="descname">GET </code><code class="descname">/api/v1/room</code><a class="headerlink" href="#get--api-v1-room" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="docutils">
 <dt>개설했던 방 리스트</dt>
-<dd><p class="first"><em>Parameters</em>: Nothing</p>
+<dd><p class="first"><strong>Parameters</strong>: Nothing</p>
 <dl class="last docutils">
-<dt><em>Response</em></dt>
-<dd><p class="first"># <em>200</em>: OK</p>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first arabic simple">
+<li><strong>200</strong>: OK</li>
+</ol>
 <blockquote class="last">
 <div><div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -377,33 +440,45 @@
 </dl>
 </dd></dl>
 
-<dl class="post">
-<dt id="post--api-v2-room-(int-room_id)-exit">
-<code class="descname">POST </code><code class="descname">/api/v2/room/</code><span class="sig-paren">(</span><em class="property">int: </em><em>room_id</em><span class="sig-paren">)</span><code class="descname">/exit</code><a class="headerlink" href="#post--api-v2-room-(int-room_id)-exit" title="Permalink to this definition">¶</a></dt>
+<dl class="put">
+<dt id="put--api-v1-room-(int-room_id)-extend">
+<code class="descname">PUT </code><code class="descname">/api/v1/room/</code><span class="sig-paren">(</span><em class="property">int: </em><em>room_id</em><span class="sig-paren">)</span><code class="descname">/extend</code><a class="headerlink" href="#put--api-v1-room-(int-room_id)-extend" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="docutils">
-<dt>채팅방 나가기</dt>
+<dt>채팅방 유효기간 연장</dt>
 <dd><dl class="first last docutils">
-<dt><em>Parameters</em></dt>
-<dd># <em>&#8220;room_id*</em>: Int, URL에 직접 삽입</dd>
-<dt><em>Response</em></dt>
-<dd># <em>200</em>: OK
-# <em>410</em>: Fail</dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;room_id*</strong>: Int, URL에 직접 삽입</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: OK</li>
+<li><strong>410</strong>: Fail</li>
+</ol>
+</dd>
 </dl>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="post">
-<dt id="post--api-v2-room-(int-room_id)-extend">
-<code class="descname">POST </code><code class="descname">/api/v2/room/</code><span class="sig-paren">(</span><em class="property">int: </em><em>room_id</em><span class="sig-paren">)</span><code class="descname">/extend</code><a class="headerlink" href="#post--api-v2-room-(int-room_id)-extend" title="Permalink to this definition">¶</a></dt>
+<dt id="post--api-v1-room-(int-room_id)-invite">
+<code class="descname">POST </code><code class="descname">/api/v1/room/</code><span class="sig-paren">(</span><em class="property">int: </em><em>room_id</em><span class="sig-paren">)</span><code class="descname">/invite</code><a class="headerlink" href="#post--api-v1-room-(int-room_id)-invite" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="docutils">
-<dt>채팅방 유효기간 연장</dt>
+<dt>개설 방에 3자 초대</dt>
 <dd><dl class="first last docutils">
-<dt><em>Parameters</em></dt>
-<dd># <em>&#8220;room_id*</em>: Int, URL에 직접 삽입</dd>
-<dt><em>Response</em></dt>
-<dd># <em>200</em>: OK
-# <em>410</em>: Fail</dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;participants[]&#8221;</strong>: Int array, 추가할 인원</li>
+</ol>
+</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>200</strong>: OK</li>
+<li><strong>410</strong>: Fail</li>
+</ol>
+</dd>
 </dl>
 </dd>
 </dl>
@@ -428,46 +503,30 @@
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>&nbsp;</td>
-<td><a class="reference external" href="#post--api-v2-admin-pretranslated-project">POST /api/v2/admin/pretranslated/project</a></td>
+<td><a class="reference external" href="#get--api-v1-schedule">GET /api/v1/schedule</a></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-odd"><td>&nbsp;</td>
-<td><a class="reference external" href="#get--api-v2-admin-pretranslated-project-(int-project_id)-resource">GET /api/v2/admin/pretranslated/project/(int:project_id)/resource</a></td>
+<td><a class="reference external" href="#post--api-v1-schedule-attend-(day)-(int-slot_id)">POST /api/v1/schedule/attend/(day)/(int:slot_id)</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#post--api-v1-schedule-delete-(day)-(int-slot_id)">POST /api/v1/schedule/delete/(day)/(int:slot_id)</a></td>
 <td>&nbsp;</td>
 </tr>
 </tbody>
 </table>
-<dl class="post">
-<dt id="post--api-v2-admin-pretranslated-project">
-<code class="descname">POST </code><code class="descname">/api/v2/admin/pretranslated/project</code><a class="headerlink" href="#post--api-v2-admin-pretranslated-project" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="docutils">
-<dt>스케줄 입력</dt>
-<dd><dl class="first last docutils">
-<dt><em>Parameters</em></dt>
-<dd><em>&#8220;sun[]&#8221;</em>: Int array, 시간 슬롯 ID
-<em>&#8220;mon[]&#8221;</em>: Int array, 시간 슬롯 ID
-<em>&#8220;tue[]&#8221;</em>: Int array, 시간 슬롯 ID
-<em>&#8220;wed[]&#8221;</em>: Int array, 시간 슬롯 ID
-<em>&#8220;thr[]&#8221;</em>: Int array, 시간 슬롯 ID
-<em>&#8220;fri[]&#8221;</em>: Int array, 시간 슬롯 ID
-<em>&#8220;sat[]&#8221;</em>: Int array, 시간 슬롯 ID</dd>
-<dt><em>Response</em></dt>
-<dd># <em>200</em>: OK
-# <em>410</em>: Fail</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
 <dl class="get">
-<dt id="get--api-v2-admin-pretranslated-project-(int-project_id)-resource">
-<code class="descname">GET </code><code class="descname">/api/v2/admin/pretranslated/project/</code><span class="sig-paren">(</span><em class="property">int: </em><em>project_id</em><span class="sig-paren">)</span><code class="descname">/resource</code><a class="headerlink" href="#get--api-v2-admin-pretranslated-project-(int-project_id)-resource" title="Permalink to this definition">¶</a></dt>
+<dt id="get--api-v1-schedule">
+<code class="descname">GET </code><code class="descname">/api/v1/schedule</code><a class="headerlink" href="#get--api-v1-schedule" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="docutils">
-<dt>스케줄 보기: Nothing</dt>
-<dd><p class="first"><em>Parameters</em>:</p>
+<dt>스케줄 보기</dt>
+<dd><p class="first"><strong>Parameters</strong>: Nothing</p>
 <dl class="last docutils">
-<dt><em>Response</em></dt>
-<dd><p class="first"># <em>200</em></p>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first arabic simple">
+<li><em>200</em></li>
+</ol>
 <div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -487,7 +546,55 @@
 }
 </pre></div>
 </td></tr></table></div>
-<p class="last"># <em>410</em>: Fail</p>
+<ol class="last arabic simple">
+<li><em>410</em>: Fail</li>
+</ol>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="post">
+<dt id="post--api-v1-schedule-attend-(day)-(int-slot_id)">
+<code class="descname">POST </code><code class="descname">/api/v1/schedule/attend/</code><span class="sig-paren">(</span><em>day</em><span class="sig-paren">)</span><code class="descname">/</code><span class="sig-paren">(</span><em class="property">int: </em><em>slot_id</em><span class="sig-paren">)</span><a class="headerlink" href="#post--api-v1-schedule-attend-(day)-(int-slot_id)" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>스케줄 입력</dt>
+<dd><dl class="first last docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;day&#8221;</strong>: URL, 요일 := [sum, mon, tue, wed, thr, fri, sat]</li>
+<li><strong>&#8220;slot_id&#8221;</strong>: URL, 시간대 슬롯 ID</li>
+</ol>
+</dd>
+<dt><em>Response</em></dt>
+<dd><ol class="first last arabic simple">
+<li><em>200</em>: OK</li>
+<li><em>410</em>: Fail</li>
+</ol>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="post">
+<dt id="post--api-v1-schedule-delete-(day)-(int-slot_id)">
+<code class="descname">POST </code><code class="descname">/api/v1/schedule/delete/</code><span class="sig-paren">(</span><em>day</em><span class="sig-paren">)</span><code class="descname">/</code><span class="sig-paren">(</span><em class="property">int: </em><em>slot_id</em><span class="sig-paren">)</span><a class="headerlink" href="#post--api-v1-schedule-delete-(day)-(int-slot_id)" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>스케줄 입력</dt>
+<dd><dl class="first last docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;day&#8221;</strong>: URL, 요일 := [sum, mon, tue, wed, thr, fri, sat]</li>
+<li><strong>&#8220;slot_id&#8221;</strong>: URL, 시간대 슬롯 ID</li>
+</ol>
+</dd>
+<dt><em>Response</em></dt>
+<dd><ol class="first last arabic simple">
+<li><em>200</em>: OK</li>
+<li><em>410</em>: Fail</li>
+</ol>
 </dd>
 </dl>
 </dd>
