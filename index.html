@@ -102,6 +102,10 @@
 <td><a class="reference external" href="#post--api-v1-signup">POST /api/v1/signup</a></td>
 <td>&nbsp;</td>
 </tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td><a class="reference external" href="#get--api-v1-userList">GET /api/v1/userList</a></td>
+<td>&nbsp;</td>
+</tr>
 </tbody>
 </table>
 <dl class="get">
@@ -331,15 +335,63 @@
 <dt>회원가입</dt>
 <dd><dl class="first last docutils">
 <dt><strong>Parameters</strong></dt>
-<dd># <strong>&#8220;email&#8221;</strong>: String, email
-# <strong>&#8220;name&#8221;</strong>: String, 이름
-# <strong>&#8220;password&#8221;</strong>: String, sha256(password)
-# <strong>&#8220;language_id&#8221;</strong>: Int, 지정된 언어ID</dd>
+<dd><ol class="first last arabic simple">
+<li><strong>&#8220;email&#8221;</strong>: String, email</li>
+<li><strong>&#8220;name&#8221;</strong>: String, 이름</li>
+<li><strong>&#8220;password&#8221;</strong>: String, sha256(password)</li>
+<li><strong>&#8220;language_id&#8221;</strong>: Int, 지정된 언어ID</li>
+</ol>
+</dd>
 <dt><em>Response</em></dt>
 <dd><ol class="first last arabic simple">
 <li><strong>200</strong>: OK</li>
 <li><strong>403</strong>: Fail</li>
 </ol>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="get">
+<dt id="get--api-v1-userList">
+<code class="descname">GET </code><code class="descname">/api/v1/userList</code><a class="headerlink" href="#get--api-v1-userList" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>일반유저 목록</dt>
+<dd><dl class="first last docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><strong>&#8220;page&#8221;</strong>: (Default: 1) 페이징 기능을 위하여 삽입</dd>
+<dt><strong>Response</strong></dt>
+<dd><ol class="first arabic simple">
+<li><strong>200</strong></li>
+</ol>
+<blockquote class="last">
+<div><div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span>{
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 1, // User (Interpreter ID)
+      &quot;email&quot;: &quot;asdf@naste.com&quot;, // 이메일
+      &quot;name&quot;: &quot;blahblah&quot;, // 이름
+      &quot;region&quot;: &quot;제주&quot;, // 거주지 및 안내 가능한 도시
+      &quot;language_id&quot;: 1 // 언어 ID
+    },
+    ...
+  ]
+}
+</pre></div>
+</td></tr></table></div>
+</div></blockquote>
 </dd>
 </dl>
 </dd>
@@ -661,7 +713,7 @@
       &copy;2017, Lee, Jun-hang.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
       
       |
